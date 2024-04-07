@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-1 Rectangle Object</title>
+</head>
+<body>
+    Problem-1 Rectangle Object
+
+    Create a rectangle object with length and width properties
+    Create two methods area and perimeter, that will return the area and perimeter of the rectangle
+
+</body>
+<script>
+    // Problem-1 Rectangle Object
+
+    // Create a rectangle object with length and width properties
+    // Create two methods area and perimeter, that will return the area and perimeter of the rectangle
+
+let rectangle={
+    L:100,
+    W:250,
+    area: function(L,W){
+        return (this.L*this.W)
+    },
+    perimeter: function(L,W){
+        return ((this.L+this.W)*2)
+    },
+}
+console.log("There area of the rectangle is "+ rectangle.area() + ", perimeter is "+ rectangle.perimeter()+".")
+</script>
+</html>
