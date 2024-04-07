@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 4: Write a function to check if the char is a small case or not.</title>
+</head>
+<body>
+ Write a function to check if the char is a small case or not.
+</body>
+<script>
+    // Problem 4: Write a function to check if the char is a small case or not.
+
+    function check_Small_Alphabet(str){
+        let small="abcdefghijklmnopqrstuvwxyz";
+        let flag=0;
+       
+        for(let i=0;i<str.length;i++){
+            for(let j=0;j<26;j++){
+                if(small[j]==str[i]){
+                    flag++;
+                }
+            }
+        }
+        if(flag>0){
+            console.log("The str containe small alphabet!!")
+        }
+        else{
+            console.log("The str does not containe small alphabet!!")
+        }
+    }
+    check_Small_Alphabet("NIt")
+</script>
+</html>
