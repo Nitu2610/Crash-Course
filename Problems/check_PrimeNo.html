@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1</title>
+</head>
+<body>
+  <h2>Check weather a number is prime or not?</h2>
+</body>
+<script>
+  // Problem 1: Create a function to check if a number is Prime or Not
+  function PrimeNo(num){
+    let flag=1;
+    for(let i=2;i<=num;i++){
+      if(num%i==0){
+        flag++;
+      }
+    } if(flag==2){
+      console.log(`The number ${num} is {Prime}`)
+    }
+    else {
+      console.log(`The number ${num} is {Not Prime}`)
+    }
+
+  }
+
+  PrimeNo(12)
+</script>
+</html>
