@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Cart Object</title>
+  </head>
+  <body>
+    Products Cart Object
+  </body>
+  <script>
+    // Products Cart Object
+    let data = {
+      items: [
+        { name: "Rice", quantity: 2, price: 60 },
+        { name: "Dal", quantity: 3, price: 50 },
+        { name: "Salt", quantity: 1, price: 20 },
+      ],
+      total: function () {
+        let sum = 0;
+        for (let i = 0; i < this.items.length; i++) {
+          sum += this.items[i].quantity * this.items[i].price;
+        } return sum
+      },
+    };
+    console.log(data.total());
+  </script>
+</html>
