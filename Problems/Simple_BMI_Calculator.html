@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check your BMI</title>
+  <style>
+    body{
+      background-image: url(https://images.unsplash.com/photo-1611077543693-a0194a16b034?q=80&w=2012&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+h1{
+  font-size: 46px;
+  text-align: center;
+}
+p{
+  font-size: 26px;
+  margin-left: 50px;
+}
+input{
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px rgb(103, 81, 41);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: transparent;
+  font-weight: 600;
+  height: 22px;
+}
+button{
+  margin-left: 100px;
+  padding: 8px;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: rgb(172, 116, 10);
+  background-color: black;
+  border-radius: 15px;
+  font-weight: 700;
+  border: none;
+}
+#result-box{
+  margin: auto;
+  font-size: 22px;
+  line-height: 22px;
+}
+  </style>
+</head>
+<body>
+  <h1>Check Your BMI(Body Mass Index)</h1>
+  <p>Enter your weight and height below to check your BMI result <br> </p>
+   <label for="">Put your weight in here(KG):</label>
+   <input id="weight" type="text"> <br>
+   <label for="">Put your height in here(CM):</label>
+   <input id="height" type="text"> <br>
+
+   <button id="btn">Calculate BMI</button>
+   <br><br><br>
+   <p id="result-box"></p>
+</body>
+<script>
+  document.querySelector("#btn").addEventListener("click", Calculate);
+
+  function Calculate(){
+    let w=parseInt(document.querySelector("#weight").value);
+    let h=(parseInt(document.querySelector("#height").value))/100;
+
+    let display=document.querySelector("#result-box");
+    let bmi=(w/(h*h));
+    // console.log(bmi)
+    if(bmi<=18.4){
+      display.innerHTML=`Your BMI is <strong> ${bmi.toFixed(2)} </strong>, which means you're <strong> Underweight </strong>.`
+    }
+    else if (bmi>=18.5 && bmi<=24.9){
+      display.innerHTML=`Your BMI is <strong> ${bmi.toFixed(2)} </strong>, which means you're <strong> Normal </strong>.`
+    }
+    else if (bmi>=25 && bmi<=29.9){
+      display.innerHTML=`Your BMI is <strong> ${bmi.toFixed(2)} </strong>, which means you're <strong>Overweight </strong>.`
+    }
+    else if (bmi>=30 ){
+      display.innerHTML=`Your BMI is <strong>${bmi.toFixed(2)}</strong>, which means you're <strong>Obese</strong>.`
+    }
+  }
+</script>
+</html>
