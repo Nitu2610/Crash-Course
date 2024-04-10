@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calculator</title>
+    <style>
+      body {
+        background-image: url(https://images.unsplash.com/photo-1625225233840-695456021cde?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      h1 {
+        text-align: center;
+        color: #3c584c;
+        font-size: 50px;
+      }
+      .inputBox {
+       /* border: 1px solid; */
+        width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      input {
+        font-size: 26px;
+        line-height: 26px;
+        height: 40px;
+        font-weight: 700;
+        text-align: center;
+        background-color: transparent;
+        border: 2px solid  #0366d63d;
+        border-radius: 25px;
+        width: 10%;
+        box-shadow:#0366d63d 0px 3px 8px;
+      }
+      .childBox {
+       /* border: 1px solid; */
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+        margin: auto;
+        padding: 10px;
+      }
+      button {
+        width: 90px;
+        height: 30px;
+        color: #95813c;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        background-color: #c3d4dc;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+      }
+      button:hover {
+    background-color:#3c584c;
+    color: white;
+}
+    /*  #symbol{
+      border: 1px solid;
+        width: 25px;
+        height: 25px;
+        font-size: 26px;
+        font-weight: 600;
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>Mini Calculator</h1>
+    <div class="inputBox">
+      <input id="no1" type="text" placeholder="Enter the first number!" />
+      <p id="symbol"></p>
+      <input id="no2" type="text" placeholder="Enter the second number!" />
+    </div>
+
+    <div class="childBox">
+      <button id="add">Addition</button>
+      <button id="sub">Subtract</button>
+      <button id="mul">Multiply</button>
+      <button id="div">Divide</button>
+    </div>
+  </body>
+  <script>
+    document.querySelector("#add").addEventListener("click", addition);
+    document.querySelector("#sub").addEventListener("click", subtract);
+    document.querySelector("#mul").addEventListener("click", multiple);
+    document.querySelector("#div").addEventListener("click", division);
+
+    function addition() {
+      let n1 = parseInt(document.querySelector("#no1").value);
+      let n2 = parseInt(document.querySelector("#no2").value);
+    //   let opr= document.querySelector("#symbol");
+    //   opr.innerText="+"
+      if(!isNaN(n1) && !isNaN(n2)){
+      alert(n1 + n2);
+      console.log(n1+n2)
+      } else { alert("Enter the number in input box please!!")}
+      
+    }
+    function subtract() {
+      let n1 = parseInt(document.querySelector("#no1").value);
+      let n2 = parseInt(document.querySelector("#no2").value);
+      if(!isNaN(n1) && !isNaN(n2)){
+        alert(n1 - n2);
+      console.log(n1-n2);
+      }else { alert("Enter the number in input box please!!")}
+      
+    }
+    function multiple() {
+      let n1 = parseInt(document.querySelector("#no1").value);
+      let n2 = parseInt(document.querySelector("#no2").value);
+      if(!isNaN(n1) && !isNaN(n2)){
+        alert(n1 * n2);
+      console.log(n1*n2)
+      }else { alert("Enter the number in input box please!!")}
+      
+    }
+    function division() {
+      let n1 = parseInt(document.querySelector("#no1").value);
+      let n2 = parseInt(document.querySelector("#no2").value);
+      if (!isNaN(n1) && !isNaN(n2)) {
+            if (n2 !== 0) {
+                alert(n1 / n2);
+            } else {
+                alert("Number can't be divide by zero");
+            }
+        } else {
+            alert("Enter the number in input box please!!");
+        }
+     
+    }
+  </script>
+</html>
