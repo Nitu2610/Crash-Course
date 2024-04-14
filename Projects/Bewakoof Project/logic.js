@@ -1,4 +1,4 @@
-console.log("its working");
+ // console.log("its working");
 
 const slideS = document.querySelectorAll('.cards');
 let currentIndexs = 0;
@@ -15,7 +15,7 @@ function showSlides() {
 
     currentIndexs = (currentIndexs + 1) % slideS.length;
 
-    setTimeout(showSlides, 1000); // Change slides every 2 seconds
+    setTimeout(showSlides, 1000);
 }
 
 showSlides();
@@ -43,9 +43,9 @@ const nextButton = document.querySelector('.next-button');
 let currentIndex = 0;
 
 function showSlide(index) {
-     // Calculate the translation value
+     
      const offset = -index * (100 / slides.length);
-     // Set the translation on the slide container
+    
      slideContainer.style.transform = `translateX(${offset}%)`;
  }
 
@@ -59,9 +59,7 @@ function slideNext() {
     showSlide(currentIndex);
 }
 
-// Show the first slide initially
 showSlide(currentIndex);
 
-// Event listeners for the buttons
 prevButton.addEventListener('click', slidePrev);
 nextButton.addEventListener('click', slideNext);
