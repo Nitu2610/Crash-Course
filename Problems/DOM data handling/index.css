@@ -1,0 +1,86 @@
+/* Fill CSS here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    background-image: url(https://images.unsplash.com/photo-1516053256215-94022213b13c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+p{
+    font-size: 2rem;
+    line-height: 4rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    color: #557AA9;
+    font-family: 'Poppins', sans-serif;
+}
+
+label{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
+}
+input{
+    margin-bottom: 12px;
+    margin-top: 3px;
+    border: 1px solid grey;
+    width: 210px;
+    height: 25px;
+    padding-left: 10px;
+    font-weight: 400;
+    color: gray;
+    border-radius: 3px;
+}
+#department{
+    margin-bottom: 12px;
+    margin-top: 3px;
+    border: 1px solid grey;
+    width: 220px;
+    height: 25px;
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+#Submit{
+    margin: auto;
+    margin-bottom: 12px;
+    margin-top: 3px;
+    border: none;
+    width: 220px;
+    height: 25px;
+    padding-left: 15px;
+    border-radius: 15px;
+    color: white;
+    background-color: #557AA9;
+}
+form{
+    border: 1px solid red;
+    width: 14rem;
+    padding: 1rem;
+    margin-left: 10%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+
+table{
+padding-right: 10%;
+}
+th{
+    color: white;
+    background-color: #557AA9;
+    height: 25px;
+    line-height: 25px;
+    padding: 0px 15px;  
+}
+div{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+}
+td{
+    text-align: center;
+  
+}
