@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        #HEADING{
+            text-align: center;
+        }
+        #grid-box{
+           /* border: 2px solid green; */
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        #Child_box{
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        #profile_pic_box{
+          /*  border: 1px dashed white; */
+            padding-top: 6px;
+            background-color: rgb(168, 164, 164);
+            height: 348px;
+            border-radius: 10px;
+        }
+        #profile_pic{
+            width: 100%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            
+        }
+        #NAME{
+            font-size: 20px;
+            line-height: 10px;
+            padding-top: 10px;
+            font-weight: 600;
+            text-align: center;
+        }
+        #POSITION{
+            font-size: 20px;
+            line-height: 10px;
+            font-weight: 400;
+            color: grey;
+            text-align: center;
+        }
+        #LOGO_box{
+           /* border: 3px dashed white; */
+            width: 200px;
+            height: 55px;
+            margin: auto;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        #LOGOS{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+    <div></div>
+</body>
+<script>
+    let product=[
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+        Name:"Vijay Shekhar Sharma",
+        Position:"Founder & CEO",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+        },
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",
+        Name:"Kunal Shah",
+        Position:"Founder",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png",
+        },
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg",
+        Name:"Amrish Rau",
+        Position:"CEO",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png",
+        },
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg",
+        Name:"Sampad Swain",
+        Position:"Co-Founder & CEO",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png",
+        },
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg",
+        Name:"Ankush Sachdeva",
+        Position:"Co-Founder & CEO",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg",
+        },
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg",
+        Name:"Bhanu Pratap Singh",
+        Position:"Co-Founder & CTO",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg",
+        },
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/farid_ahsan_sharechat_1251f28141.png",
+        Name:"Farid Ahsan",
+        Position:"Co-Founder & COO",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/sharechat_rect_73d95cd4e1.svg",
+        },
+        {
+        Img:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg",
+        Name:"Amit Kumar Agarwal",
+        Position:"Founder & CEO",
+        Logo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/nobroker_rect_28c9778c30.svg",
+        },
+        ];
+
+        let main_box=document.querySelector("section");
+        main_box.id="main-box";
+        let heading=document.createElement("h1");
+        heading.id="HEADING"
+        heading.innerHTML="<h1> Our Investor </h1>"
+        main_box.append(heading);
+       
+
+
+        let box=document.querySelector("div");
+        box.id="grid-box";
+        product.forEach(function(ele,i){
+            let child_box=document.createElement("div");
+            child_box.id="Child_box";
+
+            let img_box=document.createElement("div");
+            img_box.id="profile_pic_box"
+            let img=document.createElement("img");
+            img.id="profile_pic"
+            img.src= ele.Img;
+            img_box.append(img)
+            
+
+            let Name=document.createElement("p");
+            Name.id="NAME"
+            Name.innerText=ele.Name;
+
+            let Position=document.createElement("p");
+            Position.id="POSITION"
+            Position.innerText=ele.Position;
+
+            let logo_box=document.createElement("div");
+            logo_box.id="LOGO_box"
+            let img_logo=document.createElement("img");
+            img_logo.id="LOGOS"
+            img_logo.src= ele.Logo;
+            logo_box.append(img_logo)
+
+            child_box.append(img_box,Name, Position, logo_box)
+            box.append(child_box)
+        })
+        
+
+
+
+</script>
+</html>
