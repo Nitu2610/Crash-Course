@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imgaes Slide Show</title>
+    <style>
+      body {
+        background-image: url(https://images.unsplash.com/photo-1487088678257-3a541e6e3922?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-size: cover;
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        line-height: 10px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-decoration: underline;
+        color: midnightblue;
+      }
+      .mainbox {
+        text-align: center;
+        margin-top: 80px;
+      }
+      .images_box img {
+        max-width: 100%;
+        height: 550px;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+          rgb(51, 51, 51) 0px 0px 0px 3px;
+      }
+      .buttons {
+        width: 60%;
+        margin: auto;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+      }
+      button {
+        padding: 7px;
+        background-color: transparent;
+        border: none;
+        font-size: 28px;
+        font-weight: 600;
+        color: greenyellow;
+        cursor: pointer;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      button:hover {
+        text-decoration: underline;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+          rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+          rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Picture Slideshow</h1>
+    <div class="mainbox">
+      <div class="images_box"></div>
+      <div class="buttons">
+        <button class="previous">Previous</button>
+        <button class="start">Start</button>
+        <button class="next">Next</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let images = [
+      "https://images.bewakoof.com/t640/men-s-pink-heat-waves-graphic-printed-oversized-t-shirt-636708-1713445480-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-grey-heat-waves-graphic-printed-oversized-t-shirt-636727-1713445615-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-pink-the-ryuk-graphic-printed-oversized-t-shirt-592480-1684488475-1.jpg",
+      "https://images.bewakoof.com/t640/men-solid-oversized-t-shirt-69-582811-1698919441-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-blue-astro-bear-graphic-printed-oversized-t-shirt-525558-1709216711-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-brown-legendary-mickey-graphic-printed-oversized-t-shirt-624929-1698748883-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-green-wild-graphic-printed-oversized-t-shirt-582784-1710162623-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-green-oversized-t-shirt-539792-1709215006-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-green-stay-weird-typography-oversized-t-shirt-552822-1680169859-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-blue-instinct-graphic-printed-oversized-t-shirt-592473-1709216608-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-black-peace-seeker-typography-oversized-t-shirt-502331-1694761340-1.jpg",
+      "https://images.bewakoof.com/t640/men-printed-oversized-t-shirt-41-582787-1698061212-1.jpg",
+      "https://images.bewakoof.com/t640/men-oversized-printed-t-shirt-580023-1697138278-1.jpg",
+      "https://images.bewakoof.com/t640/men-oversized-aop-t-shirt-579956-1703579128-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-purple-venom-street-graphic-printed-oversized-t-shirt-547537-1670828932-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-all-over-printed-oversized-t-shirt-579980-1693463339-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-black-breathing-rockstar-typography-oversized-t-shirt-597321-1704362196-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-black-ghost-rider-spirit-of-vengeance-graphic-printed-oversized-t-shirt-604148-1694764028-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-black-beyond-the-future-printed-oversized-t-shirt-604513-1702298499-1.jpg",
+      "https://images.bewakoof.com/t640/men-s-blue-skeleton-october-graphic-printed-oversized-t-shirt-620584-1697697749-1.jpg",
+    ];
+
+    let displayBox = document.querySelector(".images_box");
+    let Start = document.querySelector(".start");
+    let Prev = document.querySelector(".previous");
+    let Next = document.querySelector(".next");
+    let Events;
+    let currentIndex = 0;
+    let flag = false;
+
+    function start_slideshow() {
+      Events = setInterval(function () {
+        displayBox.innerHTML = "";
+        let img = document.createElement("img");
+        img.src = images[currentIndex];
+        displayBox.appendChild(img);
+        currentIndex = (currentIndex + 1) % images.length;
+      }, 1000);
+      Start.textContent = "Stop";
+      flag = false;
+    }
+
+    function stop_slideshow() {
+      clearInterval(Events);
+      Start.textContent = "Start";
+      flag = true;
+    }
+
+    function toggle_slideshow() {
+      if (!flag) {
+        stop_slideshow();
+      } else {
+        start_slideshow();
+      }
+    }
+
+    function show_previous_slide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      displayBox.innerHTML = "";
+      let img = document.createElement("img");
+      img.src = images[currentIndex];
+      displayBox.appendChild(img);
+      stop_slideshow();
+    }
+
+    function show_next_slide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      displayBox.innerHTML = "";
+      let img = document.createElement("img");
+      img.src = images[currentIndex];
+      displayBox.appendChild(img);
+      stop_slideshow();
+    }
+
+    Start.addEventListener("click", toggle_slideshow);
+    Prev.addEventListener("click", show_previous_slide);
+    Next.addEventListener("click", show_next_slide);
+
+    start_slideshow();
+  </script>
+</html>
+'Times New Roman', Times,
