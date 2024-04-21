@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="todo_task">
+      <input type="text" placeholder="Enter the task name" />
+      <select>
+        <option value="Select">Select the Priority</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button>Add Task</button>
+    </div>
+    <div class="table_outline">
+      <table>
+        <thead>
+          <th>S No</th>
+          <th>Task Name</th>
+          <th>Priority</th>
+          <th>Is it Completed?</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+  <script>
+    let todo_Task = document.querySelector("input").value;
+
+    let priority = document.querySelector("select").value;
+
+    let btn = document.querySelector("button");
+
+    let table_body=document.querySelector("tbody")
+
+    let details = [];
+
+    function uploadData() {
+      localStorage.setItem("data", JSON.stringify(details));
+    }
+
+    function retriveData() {
+      let val = JSON.parse(localStorage.getItem("data"));
+      if(val){
+        details=val;
+        displayData();
+      }
+      // console.log(val);
+    }
+
+    function displayData(){
+        table_body.innerHTML="";
+        details.forEach(function(ele,i){
+        let tr=document.createElement("tr");
+
+        let td1=document.createElement("td");
+        td1.innerText=`${i+1}`;
+
+        let td2=document.createElement("td")
+        td2.innerText=ele.todo;
+
+        let td3=document.createElement("td");
+        td3.innerText=ele.priority;
+
+        let td4=document.createElement("td")
+        let delete_btn=document.createElement("button");
+
+        delete_btn.addEventListener("click", (function (){ deleteTask(i)}));
+
+        delete_btn.innerHTML="Delete";
+
+        td4.append(delete_btn);
+
+        tr.append(td1,td2,td3,td4);
+
+        table_body.append(tr);
+    });
+}
+
+    function saveData() {
+      let obj = {
+        todo: todo_Task,
+        priority,
+      };
+      details.push(obj);
+      uploadData();
+      displayData()
+    }
+
+    function deleteTask(index){
+        // details.filter(function (ele,i){
+        //     return i!==index
+        // })
+
+        details.splice(index,1);
+        uploadData();
+        displayData();
+    }
+
+    
+    btn.addEventListener("click", saveData);
+  </script>
+</html>

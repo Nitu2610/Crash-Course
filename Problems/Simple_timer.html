@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Timer</title>
+    <style>
+        body{
+            background-image: url(https://images.unsplash.com/photo-1531685250784-7569952593d2?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFja2dyb3VuZHxlbnwwfDB8MHx8fDI%3D);
+            background-size:cover;
+        }
+        h1{
+            text-align: left;
+            margin-left: 100px;
+            font-size: 60px;
+            color:grey;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline;
+        }
+        
+        .container{
+            border: 1px solid  grey;
+            width: 60%;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .timer_display{
+            text-align: center;
+            font-size: 60px;
+        }
+        .buttons{
+           /* border: 2px dotted; */
+            width: 80%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            font-size: 20px;
+            padding: 4px 8px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+            background-color: grey;
+            border: none;
+            border-radius: 5px;
+            color:antiquewhite;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>STOPWATCH</h1>
+    <div class="container">
+      <div class="timer_display">00:00:00</div>
+      <div class="buttons">
+        <button class="start">Start/ Resume</button>
+        <button class="pause">Pause</button>
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let display = document.querySelector(".timer_display");
+
+    let Start = document.querySelector(".start");
+
+    let Stop = document.querySelector(".pause");
+
+    let Reset = document.querySelector(".reset");
+
+    let Intervals;
+    let sec = 0;
+    let min = 0;
+    let hr = 0;
+
+    function start_timer() {
+      Intervals = setInterval(function () {
+        sec++;
+        if (sec === 60) {
+          sec = 0;
+          min++;
+          if (min === 60) {
+            min = 0;
+            hr++;
+          }
+        }
+
+        let displayText = "";
+
+        if (hr > 0) {
+          displayText += `${hr} hr:`;
+        }
+        if (min > 0 || hr > 0) {
+          displayText += `${String(min).padStart(2, "0")} min: `;
+        }
+        displayText += `${String(sec).padStart(2, "0")} sec`;
+
+        display.innerHTML = displayText;
+      }, 10);
+    }
+
+    function pause_timer() {
+      clearInterval(Intervals);
+    }
+
+    function reset_timer() {
+      clearInterval(Intervals);
+      sec = 0;
+      min = 0;
+      hr = 0;
+      display.innerHTML = "00 hr: 00 min: 00 sec";
+    }
+
+    Start.addEventListener("click", start_timer);
+    Stop.addEventListener("click", pause_timer);
+    Reset.addEventListener("click", reset_timer);
+  </script>
+</html>
