@@ -7,13 +7,17 @@
     <title>Sugar</title>
     <style>
         .wrapper {
+    border: 1px solid green;
+    width:90%;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
+    margin:auto;
+    padding:10px
         }
 
         .card-lists {
-            border: 1px solid blue;
+          /*  border: 1px solid blue; */
             width: 220px;
             padding: 5px;
             display: flex;
@@ -22,12 +26,17 @@
             text-align: center;
         }
         .coupen-code {
+     
             border: 2px dashed red;
             display: flex;
-            width: 70%;
+            width: 50%;
             justify-content: space-between;
             margin-top: 10px;
         }
+.card-box{
+  border:2px dashed blue;
+  float:right;
+}
         .card{
             border: 1px solid black;
             padding: 0px 10px;
@@ -36,6 +45,90 @@
             width: fit-content;
             border-radius: 20px;
         }
+/* small  */
+@media screen and (max-width:599px){
+  .wrapper {
+    border: 1px solid green;
+    width:70%;
+            display: flex;
+     flex-direction: column;
+            gap: 20px;
+    margin:auto;
+    padding:10px
+        }
+
+        .card-lists {
+          /*  border: 1px solid blue; */
+            width: 220px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .coupen-code {
+     
+            border: 2px dashed red;
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+.card-box{
+  border:2px dashed blue;
+  float:right;
+}
+        .card{
+            border: 1px solid black;
+            padding: 0px 10px;
+        }
+        img{
+            width: fit-content;
+            border-radius: 20px;
+        }
+}
+
+@media screen and (min-width:600px )and (max-width: 900px){
+  .wrapper {
+    border: 1px solid green;
+    width:90%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+    margin:auto;
+    padding:10px
+        }
+
+        .card-lists {
+          /*  border: 1px solid blue; */
+            width: 220px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .coupen-code {
+     
+            border: 2px dashed red;
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+.card-box{
+  border:2px dashed blue;
+  float:right;
+}
+        .card{
+            border: 1px solid black;
+            padding: 0px 10px;
+        }
+        img{
+            width: fit-content;
+            border-radius: 20px;
+        }
+}
     </style>
 </head>
 
@@ -43,9 +136,9 @@
     <div class="wrapper">
         <div class="card-lists">
             <div class="img">
-                <img src="/images/1.avif" alt="image-one" width="200px" height="150px" />
+                <img src="https://images.sugarcosmetics.com/Promotion/5b050f83-b466-416b-89ce-f179462ac8f0.jpg" alt="image-one" width="200px" height="150px" />
             </div>
-            <div class="coupen-code">
+            <div class="coupen-code card-box">
                 <div class="card">1</div>
                 <div class="card">2</div>
             </div>
@@ -53,9 +146,9 @@
 
         <div class="card-lists">
             <div class="img">
-                <img src="/images/2.jpg" alt="image-one" width="200px" height="150px" />
+                <img src="https://d32baadbbpueqt.cloudfront.net/Promotion/0844a8f6-78e3-429d-b352-4e020f447004.jpg" alt="image-one" width="200px" height="150px" />
             </div>
-            <div class="coupen-code">
+            <div class="coupen-code card-box">
                 <div class="card">1</div>
                 <div class="card">2</div>
             </div>
@@ -63,9 +156,9 @@
 
         <div class="card-lists">
             <div class="img">
-                <img src="/images/3.avif" alt="image-one" width="200px" height="150px" />
+                <img src="https://images.sugarcosmetics.com/Promotion/9b51e68a-a374-408a-ad3b-7d521346dc13.jpg" alt="image-one" width="200px" height="150px" />
             </div>
-            <div class="coupen-code">
+            <div class="coupen-code card-box">
                 <div class="card">1</div>
                 <div class="card">2</div>
             </div>
@@ -73,9 +166,9 @@
 
         <div class="card-lists">
             <div class="img">
-                <img src="/images/4.avif" alt="image-one" width="200px" height="150px" />
+                <img src="https://images.sugarcosmetics.com/Promotion/5dacc47b-0505-4fa2-9ea3-d3e3b88d3f50.jpg" alt="image-one" width="200px" height="150px" />
             </div>
-            <div class="coupen-code">
+            <div class="coupen-code card-box">
                 <div class="card">1</div>
                 <div class="card">2</div>
             </div>
@@ -83,9 +176,9 @@
 
         <div class="card-lists">
             <div class="img">
-                <img src="/images/5.avif" alt="image-one" width="200px" height="150px" />
+                <img src="https://images.sugarcosmetics.com/Promotion/7ee374a2-db58-4159-83c5-d8b2b02579cd.jpg" alt="image-one" width="200px" height="150px" />
             </div>
-            <div class="coupen-code">
+            <div class="coupen-code card-box">
                 <div class="card">1</div>
                 <div class="card">2</div>
             </div>
@@ -93,9 +186,9 @@
 
         <div class="card-lists">
             <div class="img">
-                <img src="/images/6.avif" alt="image-one" width="200px" height="150px" />
+                <img src="https://images.sugarcosmetics.com/Promotion/63b782a7-3a1f-4424-953d-372cb8a9cca7.jpg" alt="image-one " width="200px" height="150px" />
             </div>
-            <div class="coupen-code">
+            <div class="coupen-code card-box">
                 <div class="card">1</div>
                 <div class="card">2</div>
             </div>
