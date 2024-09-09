@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sugar</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .card-lists {
+            border: 1px solid blue;
+            width: 220px;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .coupen-code {
+            border: 2px dashed red;
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .card{
+            border: 1px solid black;
+            padding: 0px 10px;
+        }
+        img{
+            width: fit-content;
+            border-radius: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="wrapper">
+        <div class="card-lists">
+            <div class="img">
+                <img src="/images/1.avif" alt="image-one" width="200px" height="150px" />
+            </div>
+            <div class="coupen-code">
+                <div class="card">1</div>
+                <div class="card">2</div>
+            </div>
+        </div>
+
+        <div class="card-lists">
+            <div class="img">
+                <img src="/images/2.jpg" alt="image-one" width="200px" height="150px" />
+            </div>
+            <div class="coupen-code">
+                <div class="card">1</div>
+                <div class="card">2</div>
+            </div>
+        </div>
+
+        <div class="card-lists">
+            <div class="img">
+                <img src="/images/3.avif" alt="image-one" width="200px" height="150px" />
+            </div>
+            <div class="coupen-code">
+                <div class="card">1</div>
+                <div class="card">2</div>
+            </div>
+        </div>
+
+        <div class="card-lists">
+            <div class="img">
+                <img src="/images/4.avif" alt="image-one" width="200px" height="150px" />
+            </div>
+            <div class="coupen-code">
+                <div class="card">1</div>
+                <div class="card">2</div>
+            </div>
+        </div>
+
+        <div class="card-lists">
+            <div class="img">
+                <img src="/images/5.avif" alt="image-one" width="200px" height="150px" />
+            </div>
+            <div class="coupen-code">
+                <div class="card">1</div>
+                <div class="card">2</div>
+            </div>
+        </div>
+
+        <div class="card-lists">
+            <div class="img">
+                <img src="/images/6.avif" alt="image-one" width="200px" height="150px" />
+            </div>
+            <div class="coupen-code">
+                <div class="card">1</div>
+                <div class="card">2</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
