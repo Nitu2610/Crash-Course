@@ -1,0 +1,26 @@
+#outer_container{
+    border: 1px solid black;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+}
+.text_box{
+    width: fit-content;
+    border-radius: 5px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+input{
+    width: 250px;
+    height: 110px;
+}
+.btn_go{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+.displayLength{
+    border:2px solid blue;
+    margin: auto;
+    font-weight: 800;
+}
