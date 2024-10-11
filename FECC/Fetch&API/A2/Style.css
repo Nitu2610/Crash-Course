@@ -1,0 +1,33 @@
+#outer_container {
+ /* border: 1px solid; */
+  padding: 10px;
+  width: fit-content;
+  margin: auto;
+}
+#userCard {
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#btn_fetch {
+  padding: 5px;
+  font-weight: bold;
+}
+.userDetailsInCard {
+  border: 1px solid red;
+  width: 200px;
+  padding: 10px;
+}
+.heading {
+  font-weight: 800;
+  text-align: center;
+}
+.image {
+  border: 1px solid greenyellow;
+  border-radius: 15px;
+  display: block;
+  margin: auto;
+}
