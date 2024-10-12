@@ -1,0 +1,35 @@
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #d5c3c3;
+}
+
+.products-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+padding: 20px;
+}
+
+.product-card {
+border: 1px solid #ccc;
+border-radius: 8px;
+margin: 10px;
+padding: 25px;
+width: 280px;
+height: auto;
+background-color: #ffffff;
+}
+
+.product-image {
+    display: block;
+    margin: auto;
+max-width: 90%;
+height: auto;
+}
+
+.filter-container {
+margin: 20px;
+}
