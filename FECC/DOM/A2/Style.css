@@ -1,0 +1,46 @@
+#outer_box{
+    border: 1px solid grey;
+    width: 90%;
+    margin: auto;
+}
+#input_box{
+   /* border: 2px solid red; */
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+#btn_submit{
+    margin-top:10px ;
+    margin-left: 10px;
+    font-weight: 800;
+}
+hr{
+    margin-top: 20px;
+    width: 85%;
+    height: 2px;
+    background-color:rgb(175, 116, 38);
+    border-radius: 2px;
+}
+.cardsContainer{
+    border: 1px solid green;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+justify-content: space-evenly;
+row-gap: 10px;
+
+}
+.cardBox{
+    border: 1px solid rgb(16, 16, 16);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f3cccc;
+    width:80%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+.cardBox .heading {
+    margin: 5px 0; 
+    font-size: 14px; 
+}
