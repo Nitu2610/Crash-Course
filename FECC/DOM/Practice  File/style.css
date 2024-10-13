@@ -1,0 +1,19 @@
+body{
+    background-color: antiquewhite;
+}
+#display_products{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+
+.card{
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+    width: 300px; 
+    text-align: center;
+}
+.image {
+    width: 250px;
+    height: auto; 
+}
