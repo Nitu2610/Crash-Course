@@ -24,6 +24,6 @@ function SaveUserData(e){
 
     savedData.push(obj);
 
- //   console.log(savedData)
+ console.log(savedData)
 }
 
