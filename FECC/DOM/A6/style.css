@@ -1,3 +1,57 @@
-.formInput{
-    margin-bottom: 5px;
+#body_outline{
+    border: 1px solid grey;
+    width: 80%;
+    margin: auto;
+}
+#page_heading{
+    text-align: center;
+    padding-bottom: 10px;
+}
+#form_details{
+    border: 2px solid red;
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    
+}
+.input_box{
+margin-bottom: 5px;
+}
+#btn_submit{
+    display: block;
+    margin: auto;
+    padding: 3px;
+    margin-top: 15px;
+    width: 30%;
+    font-weight: 600;
+}
+#display_data{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    
+}
+#display_data_heading{
+    padding-left: 20px;
+}
+
+#user_data_displayed{
+    border: 4px dotted blue;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    gap: 10px;
+    background-color: lightblue;
+}
+.usercard{
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 250px;
+    padding-left: 10px;
+    background-color: lightcoral;
+    flex:1
 }
