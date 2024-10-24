@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Garph Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="body">
+        <h1> Product Rating via Bar Graph</h1>
+
+        <div id="user_input_box">
+            <h3>Product Details</h3>
+            <form action="">
+
+                <div class="form_layers">
+                    <label for="" > Title: </label>
+                    <input type="text" pattern="[A-Za-z]+" 
+                    title="Only alphabetic characters are allowed."
+                    id="product_title" >
+                </div>
+
+                <div class="form_layers">
+                    <label for="">Price</label>
+                    <input type="number" id="product_price" >
+                </div>
+
+                <div class="form_layers">
+                    <label for="">Rating</label>
+                    <select name="" id="product_rating">
+                        <option value="">Select the Rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <input type="submit" id="btn-submit">
+            </form>
+        </div>
+
+        <div id="display_inner_data"></div>
+
+    </div>
+    
+</body>
+</html>
+<script src="index.js"></script>
