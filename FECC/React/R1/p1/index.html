@@ -13,14 +13,20 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
   <script type="text/babel">
- <div id="root"></div>
+// The Declarative approach- REACT.
+   let element=React.createElement("p",null,"Seize the day");
+// the createElement is used to create any element of HTML, here its Paragraph("P")
+ ReactDOM.createRoot(document.getElementById("root")).render(element)
+// ReactDOM cobnvert the created element and convert it into code as per JS to execute it.
 
-  const root = ReactDOM.createRoot(document.getElementById('root'));
-  // write you code here -------->
+/*
+// the traditional way to manipulate the DOM-Imperative Approach
+let displayBox=document.querySelector("#root");
 
-  root.render(<h1 className="page-title blue">I love Javascript</h1>);  
-
-  // your code ends here <--------
+let info=document.createElement("p");
+info.innerText="Seize the day";
+displayBox.append(info)
   
+*/
   </script>
 </html>
