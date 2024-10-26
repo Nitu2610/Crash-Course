@@ -12,25 +12,27 @@
   <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-const {useState}=React;
-    function ButtonWithCounter(){
-        let [count,setCount]=useState(0);
+    const { useState } = React;
+    function ButtonWithCounter() {
+      let [count, setCount] = useState(0);
 
-    const Increament=()=>{
-            setCount(count+1)
-        }
+      const Increament = () => {
+        setCount(count + 1);
+      };
 
-        return (<>
-        <button onClick={Increament}>Click Me</button>
-        <h1>{count}</h1>
-        
+      return (
+        <>
+          <button onClick={Increament}>Click Me</button>
+          <h1>{count}</h1>
         </>
-        )
+      );
     }
-   
-   ReactDOM.createRoot(document.getElementById("root")).render(<ButtonWithCounter/>)
 
-   /*
+    ReactDOM.createRoot(document.getElementById("root")).render(
+      <ButtonWithCounter />
+    );
+
+    /*
 Note:-
 the first challenge I faced was on how ot use the useState as I received the reference error and I was clu less why this was happening, then took the help from chatGPT where it gave me the reason to import the useState Hook from react before I can use it.
 
@@ -38,7 +40,4 @@ Next challenge was on the destructure of useState where i missed on how to do it
 
 */
   </script>
-  
 </html>
-
-
