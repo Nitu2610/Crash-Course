@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Components in React</title>
+    <style>
+        body {
+            background-color: rgb(248, 250, 252);
+            width: 95%;
+            ;
+            margin: auto;
+            padding-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const { useState } = React;
+
+        function App() {
+            let [state, setState] = useState([[1, 2, 3],
+            ["find your template", "Copy the code", "Enjoy your free time"], ["Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour.", "Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs.", " You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features"]]);
+
+
+            function Cards() {
+                return state[0].map((item, index) => {
+                    let no = state[0][index];
+                    let title = state[1][index];
+                    let content = state[2][index];
+                    return (
+                        <div key={item} className="card" style={{ width: "350px", padding: "10px", width: "90%" }}>
+
+                            <h1 style={{
+                                width: "fit-content", padding: " 4px 8px", margin: "auto", backgroundColor: "rgb(198, 246, 212)", fontColor: "rgb(58, 119, 89)", borderRadius: "10px",
+                            }}>0{no}</h1>
+                            <h2 style={{ textAlign: "center" }}>{title}</h2>
+                            <p style={{ textAlign: "center", fontWeight: "100", color: "grey" }}>{content}</p>
+                        </div>
+                    );
+                });
+            }
+
+            return (
+                <>
+
+                    <h1 style={{ textAlign: "center", marginTop: "30px" }}>Getting started in <strong style={{
+                        fontSize: "24px",
+                        textDecoration: "none",
+                        position: "relative",
+                        color: "#339966",
+                        fontWeight: "bold",
+                    }}>3 easy steps<span
+                        style={{
+                            position: "absolute",
+                            bottom: 0,
+                            left: 0,
+                            right: 0,
+                            height: "7px",
+                            backgroundColor: "#c0f2d2",
+                            zIndex: -1,
+                        }}
+                    ></span> </strong></h1>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", columnGap: "20px", border: "1px solid black" }}>{Cards()}</div>
+
+                </>
+            );
+        }
+
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+    </script>
+</body>
+
+</html>
