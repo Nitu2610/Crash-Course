@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const AddToCartBtn = () => {
+        alert("Peoduct added successfully!");
+      };
+      const element = (
+        <>
+          <div style={{ width: "90%", margin: "auto" }}>
+            <img
+              src="https://mrstateless.com/wp-content/uploads/2020/11/SNK2.jpg"
+              style={{ height: "500px", width: "100%", borderRadius: "10px" }}
+              alt="watch Image"
+            />
+            <h1>Automatic Watch</h1>
+            <h3>$350.00 USD</h3>
+            <p style={{ color: "grey" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+              sed impedit incidunt voluptatem tempora dolorem quos, assumenda
+              quo distinctio. Asperiores veritatis, beatae illum quia minus
+              reprehenderit cupiditate cumque ipsam blanditiis!
+            </p>
+
+            <p style={{ fontWeight: "400px" }}>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusamus sint sunt fugit quasi beatae, ut dignissimos commodi
+              voluptatibus dolor sit.{" "}
+            </p>
+            <hr />
+
+            <div className="watchFeatures" style={{}}>
+              <div
+                style={{
+                  display: "flex",
+                  flex: "2",
+                }}
+              >
+                <h3 style={{ color: "orange" }}>Features</h3>
+              </div>
+
+              <div>
+                <ul
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2,1fr)",
+                    listStyleType: "none",
+                    padding: "0",
+                    margin: "0",
+                  }}
+                >
+                  <li>Chronograph</li>
+                  <li>Master Chronometer Certified</li>
+                  <li>Tachymeter</li>
+                  <li>Anti-magnetic</li>
+                  <li>Chronometer</li>
+                  <li>Small seconds</li>
+                </ul>
+              </div>
+            </div>
+            <br />
+            <hr style={{ border: "0.05px solid lightGrey" }} />
+            <div className="watchDetails">
+              <div>
+                <h3 style={{ color: "orange" }}>Product Details</h3>
+              </div>
+              <div>
+                <p>
+                  <strong>Between Lungs:</strong> 20 mm
+                </p>
+                <p>
+                  <strong>Bracelet:</strong> leather strap
+                </p>
+                <p>
+                  <strong>Cast:</strong> Steel
+                </p>
+                <p>
+                  <strong>Case diameter:</strong> 42 mm
+                </p>
+                <p>
+                  <strong>Dial color:</strong> Black
+                </p>
+                <p>
+                  <strong>Crystal:</strong> Domed, scratch-resistance sapphire
+                  crystal with anti-reflective tratement inside
+                </p>
+                <p>
+                  <strong>Water resistance:</strong> 5bar (50 meter /167 feet)
+                </p>
+              </div>
+            </div>
+
+            <button
+              style={{
+                backgroundColor: "black",
+                color: "white",
+                width: "100%",
+                padding: "5px",
+                marginTop: "20px",
+              }}
+              onClick={AddToCartBtn}
+            >
+              ADD TO CART
+            </button>
+
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABDlBMVEX///8ZNFL///3//v8ZM1QaM1IZNFHm6+4uN0kAJEcAABb///sACyzt8/QaNlSlrbMXMFLq7/cAAAheY20ADTUAAA+nrrjc4ucAABwDFjgAAAAZNldETV0YN1J4gY6BiI1BRFkAACMAACgZJDwAACQAAB7M1t0AJEsABjQbMlcAFjN2f4wAAC33//8SIkGutsMAGzu/xs0TIUKHjJsYLEoAEjZWWWU2OkcACya+wc9OUFsGJEBGRlE+Qlrn5e8lPVpibn8RGzMZLlYZHzEZKT8oLD6WoK5OV2tgZnfV2+cpMVCIkZmlqbxxeIhETWQrOE4JGUJsc4vP0OBFU2WboqoAFy6RlKJXYnq8vsM/QEQemuF4AAAQWUlEQVR4nO1cC1vbOBaVLcmUxHadDiQkJmkTksw4YOeB6ZTNzkBbGmDalJkpfez//yN7r+S8wHk5Bubb1fla0wZH1tHj6tyrKxOioKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKDwfwP9qSvwYKBIjVI9+zAU6YOUuj4ozWaz+oPhqenJSvyvskPo0H+UWIWtB8NTMyQ4B09f//rsofDmaelRHKbktBQw56Hw4mkZ6pRSQl/3PIcBeMoXhJN5WoJZoKjn/uX97GoPAZtrfPcfwJC+DlzjIQhiocaTM4S/MA/7Zb5wMsE0ZYnAH3OUUjHn7i19sNiT7k//frUEvwU7DnMZW70HOYNO5M4ePjhq0LkrJh3fswlkcTAqdTr7MRL/femy1qzUzrjr8PUZLle9KYmDrCyF0klhuljws/rSFoSbCDnvu06SPoyqv+AROJKy6TGcbi5BUJS+WHxlxViurcFvhiFZyjCVThz14HRZOP71cRfSuRfR8c0ON+y1GU4sDY1rvHTdDyoIYXeMiqfjp2aXguRr7uqzcIZhVH5su4MRoCQ1R4tu0GR+7m3oJLKl4+aL60P5cTq2lBJhRv1m/nn++fPnebjgzxWRP37WP4PlIhHDydJw90J8309pFiKwsazKW/NoZxq/AHZ+2VmM2lHH4TAJ15+HU+vh4qqlRJG090Jmj6FxHmlkdyHgLljv4QsL1R2fmabjeUhp4eUiHD6XVRvXMjE90ZQ/9d55fAayYnwFxNwFHwELZhtABkVaXB9mSaFR7HQ6xU6rWCx2in/Cf4oR4OOTYulU9qHs6+RBI2E5yXnR87AqPJ2L64KjBLPTLhv4QewoBYYtHDeaYdiubUCDlI0RNA4FhO/b2IdSi+gbMARbAyZ/FwfmKj22EgTT0D3TcMAzZz5D+QF3XIN5zJgUAO3Nefj2VCjmrKSYkKAY3lmSG2YaZsoIbYaeIOeLGELneS7KPuZ52sT58NBZdpBipA03C96iP2h182njompoyxjCGOXb9cxeJpPZw0uEvUy1D0Pd4R+uhYbc1KLqaejbGAzeCJuzaB7CJNQumoXmXVxfX7ZsLbTDUoHQFNYMWcRClb0+CMldBTjJ5ttSZKhpF7GRxcJ+H0yQEz5rbjIHxwzHeiJNUPK8iH7VQksD/z4ooAydZZGlQPHrWeg6IQxUoVA3029pDIR70MntEagCbaGlMQzBEL04OoHwy3IfAhjgTvDsmpCVFBCZb45oCrM55uvWjeO5HM1NnKaZZpglI99GOvbS57g+2Oaax1r/3iIrehkihoa3+puRWRHX34+koZnTh3qhyMGUsoOCLnzt6UYSrgW5/tDzygbrtLYm5Jf1JgxHvzn86VHwRw/12woMt1C53GEonHLSPQgM2+at17+TKXu/uDt10ryo9bYfBD/PwgF+4HQsY8jjGKJhQS3TfQ8rRtl48zpHVl/R9lueM+PtGLgobXbRQFJCQUZ01YSHAspSPCcJQxyJMqJZC6EXXRMoTvXSfOAXS6Fjl+XDpBuQBgwUolzyjSB6UBQfZ2mWMcS/OBlJvgoD2WNvhpOgxjKb+DZwy2XO0oXreh56J7gncQ8JGE7ZlPabEFTqWeMvIpaUFUZpvhHyuHps1IVl8IBgdQdf2JhygaJfzvjHq1maCUOdDuoh10Le+GhFMc8llka3BmZmN5MySruZGo75aYaRIDWWMIy3NLrwDCl2Gxk0DMNl7l5FGtjFDKmetfxczkofhcFByByxRSjdYLFpMzI/6zKUKk4wzFI62GOOy5l57C8TX2LXDG95CF/Cv34Bzr02GaS4gcz5Uoaxo5SOg1AobvyPDXA133n1gb9qNCP2plEIVk/AX6ik732NLY26xWoafUlUzR9U0ZDxxjGuIZFF1fV11bi4XwRj6doQa9fAtI1yIobZ+QxFTgH1K+YfDgtZY4BrSGSD9AQh8flB6CUQezRf+uVy+gx12VmVKs5rpzoQYyzqjUQEaSJPDJ/V3D3jduoMpatJqXW8h8HZsP6JZie/SsAQrrlk+Aa2dIXw/toMSbQX7J83XA+sV60tPk/UiRivsQalUunF2iiVds2Qed7yvdI4W0oWMJR08NfWsI7LkVPNiwgjTbBvo8MQbWd4mEC1cS6lKVsqdNdmKCPeaG6t7ya3XZc3ukKzrs9QhFZaAaiv9dNoXI6KDbzBpfkp6zKkE4Yk96XO7VAL33elN0/XNKb4JbIHk2laeq0GcAK10c90GdKJ2YShWrhsgTDkvYOuSKVYdx6KtfRz0bWX7McwdNzF1s0EIKrAR0R3N8EotVavo/85gPb3eh+aS1XCPFx/MMNe0Ottw58gCPAH/B1d4Md2z3EZt0GTxY3I5f7mXYYaD2u7L3ZXQ6Yh8loMVhySROshel/Xh/tf9hciCBizjXiGy3GPIVttDy+CSBkrs+JhEoaY142ydlkk7vQmwO2GpeNxdYa4x7Yck5sSM6RybPu+1H3zbLHfbCDDhAGQOIZrInEfyrQTYXCkmxFLEZrAuglt406gdyOGq5U0uSsxw1lS83WU/1uQLsM1gX1YScJw6gs0SmiJ26wBV9fkTz5KEzIccZCJe/O+f/25w9O1NI/FcJzrJTPy/EL++C4qiIsOrIeprhaPx1BGcSI1dL2/V7yLE8wECT0X9AtbI6d0PkOMyEWfPwLDMWSw53IHI8cxAEce7YyQb5gGjapbfLZGJXF3TS+0uAFNZWBxDjheYpsDSI90MYrAuB5OgyFq9pLjzom6wMPLmAYFJF3w12xuI8Oy2ElbZczhV3dx/7DoIEMRM8a4HDYbONEgjA07SrSJ7drNGZKIoUhZuwfuQb1AZdvAj7uuDQRxKwbrgnnvKzDUBEMdGGIODfjt0GToWYq4L+4NYMvK6HJs3CcFhiIP6bjBY1sQqlSWGx9u2DmqnrTMWq0fgoeI43YlelN9CKwYtoo0WuhDB7WjHbNVr3VCLvYIHoYhmJwsyV2VGp34GgJD2/F61dJlu9ttdrvt4W5m23HZ3T2K+ZAMcZe7rDnMMKRXwoLqi8uuwI/zTKbDbBE1uNvOqTAUvmLudLgdM05x7Bg8qL3O472RTu9emQHHBKDVGIaYI3x9wPhoqjPX4WH1dXuqFt2rVoAGyLm7j5TGKJXilJCPHVu7V2kbd2Baz/IWsUAWWFEqs3W6b3J0HZfTQ4u5c5pvfwox7C+3GKGzWhen1khsyBUZixSdOFtoCgyFqsE14+VJTB+6Lgv3zgsiTXv0jGwWHPVhPfS81RhqvFbLFIGh4+HcxSWnflUAA2fJYChFwUj8XCUTsvCufEplPZTKJp4hKDazIqI6fqF9uP/r/nm7KeJ91sB0VmEoACspjD48VyRscGhWqPDcrtsV8LKHn64tZGDlqyHc8wAMxQ+fvCzGzCzD2Kv4uK+XO7+odn5+1yseZYaYm2X5x/WoMgtlOZYIaw4uD7imapiKWB+KxxaGb+snQX/7zyPzp6aozKDq3JNPaYxSYW2A4Yk7SjqNAqOgYbziFW7UWccvWgZ2AzZqJ/NXDg3w8QneaTMcrXPzVXGDMcp2w39wuPvkCvNgrEEJM3k5mlC2XTov4Kr1sQarpswTGH/dAYbCQ0jOUBz2wj4UC/lMonPoXGAaVm5YDVGqicCJYbPG1RZ8Z+tVH1YxVK2adCD58ovGvO1aDrj4V9UQg3aY7gAz06he5qAqW696dlkUNvkakwyT74NOMRTzkKPk5EaUWGF+gw62hrvQmNGKDI91zt688i2d/F2CIWeLJjcmX1t0gT9nssjDGgNjLBQpyhvnzASKhJ62RCOWp77GOhWZIL0JQ4JLHTKcsTUg0ML9LSh5UBXnuWxN7mm7jqtVj30wTp9779D14HfNw/xZecahSHjioOGgYhOCW/gcjlsb+sQiVx14yrR+s+U83OC8iT76gaN0JjlU47b50beIv4trMboVKLU8T4MFm9cxBe9HlUlPY2Xv0YYiiU4LF4aQojaXsxi3KJw3f+uUdDM4LiYMoX83ZRid6AKGHRCH9mQOgsoOMz784vDEc6ApYTz2+30xIsGmB88wY3yfeXgEw0VRvhLYWQbn27EZuWWsFwQh2BV4MAteQUVy/9r2vOnSmNM53EzRYMQNJyJ5mdk5uXNM5ugXuGHr1xDHjXN2cLB//uUgEL6U8+4CZIB/lTmSB25WRbF+ARPYuukDQWi04Ov+1Zeg56BkddmLHNjYw+ovOydTR3pOYHki8vhQYobicJ5OfsScdHoOBTd3YbiWy27wFYVk86aP/hPz6nlC/R+3qx+bkrhtQ9///gKMMOh556ANUrf7WwDl265zdAu/696rxOCUZjexpZikKxKTY8c5lJyvcRf6zWm18dA3aR8YKDS8nW8JHwoLW/sIjYzHGm3fAoPVrMOqYYdu8SWZc34vu1kfygPr9xjqUUp4pcVcmDDhTQ5fgEL9qxC8Vvaud4hz34+yOVZmh0KbHO54YEBddDpQfPuX20JgbA8xm5ZkpScQISucn+xmZzAWgFL/sONxWNZ7N7AEguj2K9vcgIW7dzXaz1xvqUKGw6JjaK7ntHArGtTRtx0REekPfV+emZkqUB9fHgZQ+Y9FD73zdzc53G/OWlfbGBZ0ehWS6LAmMjwuOmXD9VgGGVHiXwYMFie2fUgkw8d8bw/FeYhakb0zByLg8anFxf7vyS1JlhAP8zDfAJ0G605t4Psg4NoN1LsMF74nYKjrTdPD+njh128FkbOHWpJxs52MIS5M13uugwI7PDguWFuDi5BrZe54tTwwTJ3Csvro+tYHPFmpeY7Rurl6ZYYeDlI3fF9IwlAewLO+hg7oCdcNT367fGUGqIyAYSnnP8RZkGVV0sltFSULEy6sA1bVxtOkb88TzX9dHnvPV11QgbbBPIydMswLsN2j75Eb+Lgswdj59T7GhwxxThZdWtCQ4ftmwvKEMwo6CeS7gfkO6BRjOJyHb5tPwVBkt+Yzwu+Re+tG2eYO3x0klMLRsfR2A5PfDQzyYxo8XjLfogNRD/VitflVIv63vZCJ/hMHEMrcrl0lPeYXvQ+HDnaBFAbzNblzwc1htFf0BAx1mqtkQPEzDQP8mlYOd88tuSu3NsSb73C/i34s9V0msqfFkeDd7xaN9jEfl6EeGbcf/6mH4MTByOKh+WGwwWHP8be6v9YDB5xBdsZCs/GJPNhr/5bUR4+yc7eOP5tHO3/u1Fqwhom3IGxcdu7bM9M0W+bXN88qfxMrhQOySTA+QkYJbeZvn9/ednMEBao+P0NlNYhsnm7+9lYWKd9rmFa114A+PvMwejFJpP71TeIKJBrloyS30XsGNqrqxpAvIBE10yOCGzW5TCOgo+RukZmYVl0TYvodPTIytHmbi7Rufbbkp8Fskk1Unc1GlT8qdvxJGu+nSYrxOYQZhpv5pb6uT6WN6rNkHx13n55CZcR8jo7u0H8cQz2FFzOI2AuN8iJHc3vTQlNECq09abOnnH8KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoK/wP4L1Tu2G6xqMP7AAAAAElFTkSuQmCC"
+                style={{ width: "30px" }}
+                alt="icon"
+              />
+              <h3 style={{ paddingLeft: "15px" }}>
+                2-3 business days delivery
+              </h3>
+            </div>
+          </div>
+        </>
+      );
+      const ROOT = document.getElementById("root");
+      ReactDOM.createRoot(ROOT).render(element);
+    </script>
+  </body>
+</html>
