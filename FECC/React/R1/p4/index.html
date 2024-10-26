@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+const userInputData=()=>{
+    let inputField= document.querySelector("input");
+    inputField.value="";
+    alert("Data Saved Successfully")
+}
+
+const containerStyles={border:"1px solid black", width:"60%", margin:"auto", borderRadius:"20px"};
+
+     const element=(
+        <>
+        <div style={containerStyles}>
+        <img src="data:image/png;base64,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" style={{width:"100px", borderRadius:"20px", display:"block",margin:"auto", marginTop:"20px"}} alt="icon"/>
+        <h1 style={{textAlign:"center"}}>SUBSCRIBE</h1>
+        <h2 style={{textAlign:"center", fontWeight:"400"}}>Subscribe to our newsletter & stay up to date!</h2>
+
+        <div className="userIpnutBox" style={{ padding:"5px", width:"fit-content", margin:"auto", marginBottom:"20px"}}>
+            <input type="text" placeholder="enter the email id" style={{borderRadius:"8px",padding:"5px"}} />
+            <button onClick={userInputData} className="sub-btn" style={{marginLeft:"25px", borderRadius:"25px",padding:"5px", width:"100px", fontWeight:"600", border:"1px solid grey"}}> Subscribe</button>
+            </div>
+
+        </div>
+        </>
+     )
+
+     ReactDOM.createRoot(document.getElementById("root")).render(element)
+    </script>
+  </body>
+</html>
