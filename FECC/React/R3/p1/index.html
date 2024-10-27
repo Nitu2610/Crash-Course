@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greeting Card</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function App() {
+      let arr = [
+        { greet: "Good Morning", name: "Nitesh" },
+        { greet: "Good Evening", name: "Nitesh Kumar" },
+        { greet: "Good Night", name: "Nitesh Kumar Prajapath" },
+      ];
+      let [state, setState] = React.useState(arr);
+
+      return (
+        <div>
+          {state.map((item, index) => {
+            let { greet, name } = item;
+            return <GreetingCard key={index} greeting={greet} name={name} />;
+          })}
+        </div>
+      );
+    }
+
+    function GreetingCard({ greeting, name }) {
+      const CardStyle = {
+        border: "1px solid black",
+        borderRadius: "10px",
+        padding: "20px",
+        margin: "10px",
+        boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.1)",
+        backgroundColor: "#f9f9f9",
+      };
+      return (
+        <div style={CardStyle}>
+          <h1>{greeting}</h1>
+          <h3>{name}</h3>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</html>
