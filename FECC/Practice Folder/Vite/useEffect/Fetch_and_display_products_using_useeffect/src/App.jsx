@@ -1,42 +1,50 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./App.css";
+import axios from "axios";
 
 function App() {
-  const [product, setProduct] = useState([]);
+  let [product, setProduct] = useState([]);
+  let API = "https://fakestoreapi.com/products";
 
-  useEffect(function () {
-    async function fetchAndGetData() {
+  useEffect(() => {
+
+    const fetchDAta = async () => {
       try {
-        let res = await axios({
+      {/*
+        One way to use the Axios and another way is below.
+          let resp = await axios({
           method: "get",
-          url: "https://fakestoreapi.com/products",
+          url: API,
         });
-        console.log(res.data);
-        setProduct(res.data);
-      } catch (error) {
-        console.log("error 404", error);
-      }
-    }
+        */ }
 
-    fetchAndGetData();
+      let resp= await axios.get(API);
+        console.log(resp.data);
+        setProduct(resp.data)
+      } catch (error) {
+        console.log("something went wrong", error);
+      }
+    };
+    fetchDAta();
   }, []);
+
   return (
     <>
-      <h1>Products Displayed</h1>
-      <div>
-        {product.map((item, index) => {
-          let { image, price, rating:{rate}, title, category, description } = item;
+      <h1>Products Display</h1>
+      <div className="parent_box">
+        {product.map((item,index)=>{
+          let {title,image,description, price, rating:{rate}}=item;
           return (
-          <div key={index}>
-            <img src={image} alt={title} width={"200px"} height={"200px"} />
-            <h2>Title: {title}</h2>
-            <h3>Category: {category}</h3>
-            <p>Description: {description}</p>
-            <h4>Price:$ {price}</h4>
+            <>
+            <div className="childBox">
+            <img src={image} alt={title} width={"250px"} height={"300px"} style={{borderRadius:"15px"}} />
+            <h3 className="titleCSS">{title}</h3>
+            <p className="descriptionCSS">{description}</p>
+            <h4>Price: ${price}</h4>
             <h4>Rating: {rate}</h4>
-          </div>
-          );
+            </div>
+            </>
+          )
         })}
       </div>
     </>
