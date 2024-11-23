@@ -1,0 +1,49 @@
+body{
+    background-color: whitesmoke;
+}
+.userCardOuterBox{
+    border-radius: 20px;
+    padding: 40px;
+    width: fit-content;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    gap:20px;
+    margin-top: 60px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.userCardInnerBox{
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: beige;
+    padding-left: 20px;
+    color: darkgoldenrod;
+}
+#userName{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 23px;
+    font-weight: 800;
+}
+#userEmail{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+#userAddress{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .userCardOuterBox {
+      grid-template-columns: repeat(2, minmax(280px, 1fr)); 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .userCardOuterBox {
+      grid-template-columns: 1fr; 
+    }
+  }
+  

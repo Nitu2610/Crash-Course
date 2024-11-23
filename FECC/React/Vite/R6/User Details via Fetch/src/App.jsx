@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+
+import './App.css';
+import { Users } from './components/User';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      
       <h1>Fetch User Details via JSON using useEffect</h1>
+      <Users/>
     </>
   )
 }
