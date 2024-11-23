@@ -1,0 +1,31 @@
+.timerControllerBtn {
+  margin: 20px;
+}
+.timeSelecterBtn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.togglerBtn {
+  border: 2px solid grey;
+  margin: auto;
+}
+#timerBox {
+  border: 2px solid grey;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+#TogglerBtn {
+  border: 2px solid grey;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+}
+#TogglerBtn:hover {
+  cursor: pointer;
+  background-color: rgb(104, 101, 101);
+}
