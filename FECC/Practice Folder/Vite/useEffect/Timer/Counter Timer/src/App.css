@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+}
+#timerBox{
+text-align: center;
+border: 1px solid grey;
+padding: 10px;
+border-radius: 20px;
+width: 60%;
+margin: auto;
+}
+button{
+    margin: 10px;
+}
+#mountToggler{
+    border: 2px solid blue
+}
