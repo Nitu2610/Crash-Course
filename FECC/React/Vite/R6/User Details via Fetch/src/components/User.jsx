@@ -4,7 +4,7 @@ import "../App.css";
 import "./User.css";
 
 document.title = `User Details`;
-const Users = () => {
+const UserList = () => {
   const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
   let API = "https://jsonplaceholder.typicode.com/users";
