@@ -1,0 +1,4 @@
+Get https://jsonplaceholder.typicode.com/comments
+
+###
+GET https://jsonplaceholder.typicode.com/comments?postId=1 
