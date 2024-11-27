@@ -10,7 +10,7 @@ function App() {
     <>
     
        
-       <h1>Understanding useReducer in React
+       <h1>Understanding useREf in react
        </h1>
     </>
   )
