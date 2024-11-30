@@ -1,6 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { InputBox } from './component/InputBox'
 import './App.css'
 
 function App() {
@@ -9,6 +8,7 @@ function App() {
   return (
     <>
       <h1>Exploring useRef Hook in React</h1>
+      <InputBox/>
     </>
   )
 }
