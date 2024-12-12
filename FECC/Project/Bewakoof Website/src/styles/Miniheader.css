@@ -1,0 +1,17 @@
+body{
+    margin: 0px;
+    margin-top: 0px;
+    font-size: 10px;
+    font-weight: 450;
+    font-family: "Montserrat", sans-serif;
+}
+#MiniheaderOuterBox{
+    display: flex;
+    justify-content: space-between;
+    background-color:#ededed;
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
