@@ -13,10 +13,18 @@ ul{
     list-style: none;
     display: flex;
     gap: 10px;
+    margin-left: 0px;
 }
 .MiniheaderInnerBox{
+   /*  border: 1px solid blue; */
     display: flex;
     justify-content: space-between;
-    width: 78%;
+    width: 80%;
     margin: auto;
+}
+#Leftoptions{
+    margin-left: 20px;
+}
+#Rightoptions{
+    margin-right: 10px;
 }
