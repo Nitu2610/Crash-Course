@@ -1,0 +1,23 @@
+.Headerbar_box{
+  border-bottom: 1px solid rgb(205, 193, 193);
+  display: flex;
+  justify-content: space-between;
+}
+#leftside{
+  /* border: 3px solid  red; */
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 10%;
+}
+ul{
+  list-style: none;
+}
+#rightside{
+  border: 3px solid  green;
+  margin-right: 10%;
+}
+#logo_box{
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
