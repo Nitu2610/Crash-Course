@@ -3,6 +3,7 @@ import '../../../styles/Headerbar.css';
 import { Header_Men_Women_MobileCover } from "./Header_Men_Women_Mobile";
 import { MainHeaderLogo } from "./logo";
 import { SearchBox } from "./SearchBox";
+import { Login_Wishlist_Cart } from "./Login_Wishlist_Cart";
 
 const Headerbar = () => {
   const menItems = [
@@ -39,6 +40,7 @@ const Headerbar = () => {
 
       <div id="rightside">
         <SearchBox/> <div id="seperatorVerticalBar"></div>
+        <Login_Wishlist_Cart/>
       </div>
 
     </div>
