@@ -7,6 +7,7 @@ import { faDiamond,faMobile } from '@fortawesome/free-solid-svg-icons';
 const MiniHeader=()=>{
     return (
         <div id="MiniheaderOuterBox">
+            
             <div className="MiniheaderInnerBox">
             <div id="Leftoptions" >
             <ul>
@@ -16,7 +17,7 @@ const MiniHeader=()=>{
                     <li>Find a store near me</li>
                 </ul>
             </div>
-            <div id="Rightoptions" style={{paddingRight:"50px"}}>
+            <div id="Rightoptions">
                 <ul>
                     <li>Contact Us</li>
                     <li>Track Order</li>
