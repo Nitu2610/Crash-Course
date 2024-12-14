@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import '../../../styles/Headerbar.css';
 import { Header_Men_Women_MobileCover } from "./Header_Men_Women_Mobile";
 import { MainHeaderLogo } from "./logo";
+import { SearchBox } from "./SearchBox";
 
 const Headerbar = () => {
   const menItems = [
@@ -37,6 +38,7 @@ const Headerbar = () => {
       </div>
 
       <div id="rightside">
+        <SearchBox/> <div id="seperatorVerticalBar"></div>
       </div>
 
     </div>
