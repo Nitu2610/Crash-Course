@@ -7,6 +7,7 @@ import { faDiamond,faMobile } from '@fortawesome/free-solid-svg-icons';
 const MiniHeader=()=>{
     return (
         <div id="MiniheaderOuterBox">
+            <div className="MiniheaderInnerBox">
             <div id="Leftoptions" >
             <ul>
                     <li>Offer</li>
@@ -21,6 +22,7 @@ const MiniHeader=()=>{
                     <li>Track Order</li>
                 </ul>
 
+            </div>
             </div>
         </div>
     )
