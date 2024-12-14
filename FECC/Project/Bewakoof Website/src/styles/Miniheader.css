@@ -6,12 +6,17 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 #MiniheaderOuterBox{
-    display: flex;
-    justify-content: space-between;
     background-color:#ededed;
+ 
 }
 ul{
     list-style: none;
     display: flex;
     gap: 10px;
+}
+.MiniheaderInnerBox{
+    display: flex;
+    justify-content: space-between;
+    width: 78%;
+    margin: auto;
 }
