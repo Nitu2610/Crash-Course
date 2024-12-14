@@ -15,9 +15,19 @@ ul{
 #rightside{
   border: 3px solid  green;
   margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #logo_box{
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
+}
+#seperatorVerticalBar{
+width: 2px;
+background-color: #EAEAEA;
+height: 20px;
+margin-left: 40px;
+margin-right: 20px;
 }
