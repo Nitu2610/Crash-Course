@@ -1,0 +1,27 @@
+
+.slideshow-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  
+  .slideshow {
+    display: flex;
+    transition: all 0.5s ease;
+  }
+  
+ 
+  .slide {
+    flex: none;
+    width: 33.33%;
+    padding: 0 10px;
+  }
+  
+
+  .slide-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+  }
+  
