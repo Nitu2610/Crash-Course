@@ -1,0 +1,38 @@
+#salesEndCountDownOuterBox {
+  /*  border: 1px solid black; 
+    background-color: antiquewhite; */
+  width: 120px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+.countandtext {
+  display: flex;
+  gap: 8px;
+}
+#title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+.timefontandtextbox {
+  /*  border: 1px solid red; */
+  margin: auto;
+}
+.timefont {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.timetext {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: grey;
+}
+span {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 400;
+}
