@@ -1,0 +1,92 @@
+[
+  {
+    "id": 3,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "coverImage": "https://placehold.co/300x300/9B59B6/FFFFFF?text=You+Don't+Know+JS"
+  },
+  {
+    "id": 4,
+    "title": "Design Patterns",
+    "author": "Erich Gamma et al.",
+    "coverImage": "https://placehold.co/300x300/1ABC9C/FFFFFF?text=Design+Patterns"
+  },
+  {
+    "id": 5,
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "coverImage": "https://placehold.co/300x300/F39C12/FFFFFF?text=Refactoring"
+  },
+  {
+    "id": 6,
+    "title": "Introduction to Algorithms",
+    "author": "Cormen, Leiserson, Rivest, Stein",
+    "coverImage": "https://placehold.co/300x300/34495E/FFFFFF?text=Intro+to+Algorithms"
+  },
+  {
+    "id": 7,
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "coverImage": "https://placehold.co/300x300/2ECC71/FFFFFF?text=JS+The+Good+Parts"
+  },
+  {
+    "id": 8,
+    "title": "Cracking the Coding Interview",
+    "author": "Gayle Laakmann McDowell",
+    "coverImage": "https://placehold.co/300x300/E74C3C/FFFFFF?text=CTCI"
+  },
+  {
+    "id": 9,
+    "title": "Head First Design Patterns",
+    "author": "Eric Freeman & Elisabeth Robson",
+    "coverImage": "https://placehold.co/300x300/8E44AD/FFFFFF?text=Head+First+Design+Patterns"
+  },
+  {
+    "id": 10,
+    "title": "The Clean Coder",
+    "author": "Robert C. Martin",
+    "coverImage": "https://placehold.co/300x300/2980B9/FFFFFF?text=The+Clean+Coder"
+  },
+  {
+    "id": 11,
+    "title": "Soft Skills",
+    "author": "John Sonmez",
+    "coverImage": "https://placehold.co/300x300/F1C40F/000000?text=Soft+Skills"
+  },
+  {
+    "id": 12,
+    "title": "Working Effectively with Legacy Code",
+    "author": "Michael Feathers",
+    "coverImage": "https://placehold.co/300x300/16A085/FFFFFF?text=Legacy+Code"
+  },
+  {
+    "id": 13,
+    "title": "The Mythical Man-Month",
+    "author": "Frederick P. Brooks Jr.",
+    "coverImage": "https://placehold.co/300x300/7F8C8D/FFFFFF?text=Mythical+Man+Month"
+  },
+  {
+    "id": 14,
+    "title": "Code Complete",
+    "author": "Steve McConnell",
+    "coverImage": "https://placehold.co/300x300/D35400/FFFFFF?text=Code+Complete"
+  },
+  {
+    "id": 15,
+    "title": "The Art of Computer Programming",
+    "author": "Donald E. Knuth",
+    "coverImage": "https://placehold.co/300x300/C0392B/FFFFFF?text=TAOCP"
+  },
+  {
+    "id": 16,
+    "title": "Structure and Interpretation of Computer Programs",
+    "author": "Harold Abelson & Gerald Jay Sussman",
+    "coverImage": "https://placehold.co/300x300/27AE60/FFFFFF?text=SICP"
+  },
+  {
+    "id": 17,
+    "title": "Continuous Delivery",
+    "author": "Jez Humble & David Farley",
+    "coverImage": "https://placehold.co/300x300/5D6D7E/FFFFFF?text=Continuous+Delivery"
+  }
+]
